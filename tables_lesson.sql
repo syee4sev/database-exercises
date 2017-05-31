@@ -2,7 +2,10 @@
 
 use codeup_db;
 -- select * from mysql.user\G
-
+drop table if exists quotes;
+drop table if exists airlines;
+drop table if exists people;
+drop table if exists users;
 
 CREATE TABLE quotes (
     id int unsigned not null auto_increment primary key,
