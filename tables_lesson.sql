@@ -6,6 +6,7 @@ drop table if exists quotes;
 drop table if exists airlines;
 drop table if exists people;
 drop table if exists users;
+drop table if exists albums;
 
 CREATE TABLE quotes (
     id int unsigned not null auto_increment primary key,
@@ -35,4 +36,14 @@ create table users(
     username varchar(255) not null,
     password varchar(255) not null,
     is_admin tinyint not null
+);
+
+
+CREATE TABLE albums (
+    id           INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    artist       VARCHAR(255)  NOT NULL,
+    name         VARCHAR(255)  NOT NULL,
+    release_date YEAR,
+    sales        FLOAT,
+    genre        VARCHAR(255)  NOT NULL
 );
